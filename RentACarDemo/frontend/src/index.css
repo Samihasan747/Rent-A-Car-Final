@@ -55,7 +55,7 @@
 
 /* ------------------------------------------------------------------ light */
 :root {
-  --background: #ffffff;
+  --background: #F7F6F2;
   --foreground: #0f172a;
   --card: #ffffff;
   --card-foreground: #0f172a;
@@ -63,15 +63,15 @@
   --popover-foreground: #0f172a;
   --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
+  --secondary: #f0eee8;
   --secondary-foreground: #0f172a;
-  --muted: #f6f7f9;
+  --muted: #f0eee8;
   --muted-foreground: #64748b;
   --accent: #eff4ff;
   --accent-foreground: #1d4ed8;
   --destructive: #dc2626;
-  --border: #e6e8ec;
-  --input: #e2e6ea;
+  --border: #e6e3db;
+  --input: #e2dfd6;
   --ring: #2563eb;
   --chart-1: #2563eb;
   --chart-2: #60a5fa;
@@ -79,13 +79,13 @@
   --chart-4: #bfdbfe;
   --chart-5: #dbeafe;
   --radius: 0.75rem;
-  --sidebar: #fbfcfd;
+  --sidebar: #fbfaf6;
   --sidebar-foreground: #0f172a;
   --sidebar-primary: #2563eb;
   --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: #eff4ff;
   --sidebar-accent-foreground: #1d4ed8;
-  --sidebar-border: #e6e8ec;
+  --sidebar-border: #e6e3db;
   --sidebar-ring: #2563eb;
 }
 
