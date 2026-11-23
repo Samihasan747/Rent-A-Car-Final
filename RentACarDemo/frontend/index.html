@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="VELOCITY — premium car rental with date-based availability and transparent daily pricing."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>VELOCITY — Premium Car Rental</title>
+    <script>
+      // Apply the stored theme before first paint so there is no flash.
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('velocity-theme')
+          var theme = stored === 'dark' ? 'dark' : 'light'
+          document.documentElement.classList.toggle('dark', theme === 'dark')
+          document.documentElement.style.colorScheme = theme
+          var meta = document.querySelector('meta[name="theme-color"]')
+          if (meta) meta.setAttribute('content', theme === 'dark' ? '#101214' : '#ffffff')
+        } catch (error) {
+          /* localStorage can be unavailable in private modes; light remains the default. */
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
