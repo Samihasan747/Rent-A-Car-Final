@@ -6,7 +6,7 @@
  * the files in public/images/cars without touching any component.
  */
 
-const FALLBACK = '/images/cars/lambo.png'
+const FALLBACK = '/images/cars/lambo2.jpg'
 
 const RULES: Array<{ pattern: RegExp; src: string }> = [
   { pattern: /\b(m3|m4|m5|rs[3-7]|amg|gt|coupe|sport|supra|mustang)\b/i, src: '/images/cars/sports.png' },

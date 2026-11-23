@@ -26,14 +26,15 @@ const columns = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto border-t border-border bg-muted/40">
-      <div className="container-page py-12 lg:py-14">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1.5fr)_repeat(2,minmax(0,1fr))]">
+    <footer className="mt-auto border-t border-border bg-foreground/[0.03] dark:bg-foreground/[0.06]">
+      <div className="container-page py-14 lg:py-16">
+        <div className="grid gap-10 md:grid-cols-[minmax(0,1.6fr)_repeat(2,minmax(0,1fr))]">
           <div className="max-w-sm">
             <Logo />
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Date-based car rental with transparent daily pricing, inclusive
-              rental ranges and real-time availability.
+              rental ranges and real-time availability. Built for drivers who
+              value time, clarity and design.
             </p>
           </div>
 
@@ -58,7 +59,7 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <Separator className="my-8" />
+        <Separator className="my-10" />
 
         <div className="flex flex-col gap-2 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>© {CURRENT_YEAR} VELOCITY. Demo rental platform.</p>

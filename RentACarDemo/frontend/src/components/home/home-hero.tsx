@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { carImage } from '@/lib/car-images'
 
 const highlights = [
   'Real-time availability',
@@ -13,48 +12,56 @@ const highlights = [
 
 export function HomeHero() {
   return (
-    <section className="relative overflow-hidden border-b border-border">
-      <div
-        className="velocity-grid pointer-events-none absolute inset-0 opacity-60"
-        aria-hidden="true"
-      />
-      <div
-        className="pointer-events-none absolute -top-48 right-[-12%] size-[36rem] rounded-full bg-primary/10 blur-3xl"
-        aria-hidden="true"
-      />
+    <section className="relative isolate overflow-hidden border-b border-border">
+      {/* Cinematic background */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="/images/cars/lambo4.png"
+          alt=""
+          aria-hidden="true"
+          className="h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/40" />
+      </div>
 
-      <div className="container-page relative grid items-center gap-12 py-16 lg:grid-cols-[1.04fr_0.96fr] lg:gap-16 lg:py-24">
+      <div className="container-page relative grid items-center gap-12 py-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-28">
         <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-medium text-muted-foreground shadow-sm backdrop-blur">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80 backdrop-blur">
             <span className="relative flex size-1.5" aria-hidden="true">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-60" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-primary" />
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-amber-400 opacity-70" />
+              <span className="relative inline-flex size-1.5 rounded-full bg-amber-400" />
             </span>
             Date-based availability · Book any future window
           </div>
 
-          <h1 className="mt-6 font-heading text-4xl leading-[1.08] font-semibold tracking-tight text-balance sm:text-5xl lg:text-[3.4rem]">
-            Premium cars,
+          <h1 className="mt-6 font-heading text-4xl leading-[1.05] font-semibold tracking-tight text-balance text-white sm:text-5xl lg:text-[3.6rem]">
+            Drive the car
             <br />
-            <span className="bg-gradient-to-r from-primary via-blue-500 to-sky-400 bg-clip-text text-transparent">
-              booked by the day.
+            <span className="bg-gradient-to-r from-amber-300 via-amber-400 to-yellow-200 bg-clip-text text-transparent">
+              you have always wanted.
             </span>
           </h1>
 
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-pretty text-muted-foreground sm:text-lg">
-            Choose your dates, compare the fleet and confirm in minutes.
-            Transparent daily pricing, inclusive rental ranges and no hidden
-            fees.
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-pretty text-white/75 sm:text-lg">
+            Transparent daily pricing, inclusive rental ranges and real-time
+            availability. Choose your dates, compare the fleet and confirm in
+            minutes — no hidden fees.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="bg-amber-400 text-black hover:bg-amber-300">
               <Link to="/cars">
-                Browse the fleet
+                Explore the fleet
                 <ArrowRight aria-hidden="true" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
+            <Button
+              size="lg"
+              variant="outline"
+              asChild
+              className="border-white/30 bg-white/5 text-white hover:bg-white/10"
+            >
               <a href="#how-it-works">How it works</a>
             </Button>
           </div>
@@ -63,9 +70,9 @@ export function HomeHero() {
             {highlights.map((item) => (
               <li
                 key={item}
-                className="flex items-center gap-2 text-sm text-muted-foreground"
+                className="flex items-center gap-2 text-sm text-white/70"
               >
-                <span className="grid size-4 place-items-center rounded-full bg-primary/10 text-primary">
+                <span className="grid size-4 place-items-center rounded-full bg-amber-400/15 text-amber-300">
                   <Check className="size-3" aria-hidden="true" />
                 </span>
                 {item}
@@ -73,63 +80,47 @@ export function HomeHero() {
             ))}
           </ul>
 
-          <p className="mt-6 text-sm text-muted-foreground">
+          <p className="mt-6 text-sm text-white/60">
             New to VELOCITY?{' '}
             <Link
               to="/register"
-              className="font-medium text-foreground underline decoration-border underline-offset-4 transition-colors hover:decoration-primary focus-ring"
+              className="font-medium text-white underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-amber-300 focus-ring"
             >
               Create an account
             </Link>
           </p>
         </div>
 
-        <div className="relative">
-          <div
-            className="pointer-events-none absolute -inset-6 rounded-[2rem] bg-gradient-to-tr from-primary/10 via-transparent to-sky-400/10 blur-2xl"
-            aria-hidden="true"
-          />
-          <div className="surface-panel relative overflow-hidden rounded-3xl">
-            <div
-              className="velocity-grid pointer-events-none absolute inset-0 opacity-70"
-              aria-hidden="true"
-            />
-            <div className="relative p-5 sm:p-7">
-              <div className="flex items-center justify-between gap-3">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/80 px-2.5 py-1 text-xs font-medium backdrop-blur">
-                  <CalendarCheck className="size-3.5 text-primary" aria-hidden="true" />
-                  Availability by date
-                </span>
-                <Badge variant="secondary">Date-aware</Badge>
+        <div className="relative hidden lg:block">
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
+            <div className="flex items-center justify-between gap-3">
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/10 px-2.5 py-1 text-xs font-medium text-white/80 backdrop-blur">
+                <CalendarCheck className="size-3.5 text-amber-300" aria-hidden="true" />
+                Availability by date
+              </span>
+              <Badge variant="secondary" className="bg-white/10 text-white/80">
+                Date-aware
+              </Badge>
+            </div>
+
+            <div className="mt-6 grid grid-cols-3 divide-x divide-white/10 text-center">
+              <div className="px-2">
+                <p className="text-[0.62rem] font-medium tracking-[0.12em] text-white/50 uppercase">
+                  Daily rate
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white">Transparent</p>
               </div>
-
-              <img
-                src={carImage('Sport coupe')}
-                alt="Sports coupe side profile"
-                className="mx-auto my-1 w-full max-w-[34rem] drop-shadow-[0_18px_28px_rgba(15,23,42,0.18)]"
-              />
-
-              <div className="rounded-2xl border border-border bg-background/85 p-4 shadow-sm backdrop-blur">
-                <dl className="grid grid-cols-3 divide-x divide-border text-center">
-                  <div className="px-2">
-                    <dt className="text-[0.62rem] font-medium tracking-[0.12em] text-muted-foreground uppercase">
-                      Daily rate
-                    </dt>
-                    <dd className="mt-1 text-sm font-semibold">Transparent</dd>
-                  </div>
-                  <div className="px-2">
-                    <dt className="text-[0.62rem] font-medium tracking-[0.12em] text-muted-foreground uppercase">
-                      Rental window
-                    </dt>
-                    <dd className="mt-1 text-sm font-semibold">You choose</dd>
-                  </div>
-                  <div className="px-2">
-                    <dt className="text-[0.62rem] font-medium tracking-[0.12em] text-muted-foreground uppercase">
-                      Booking
-                    </dt>
-                    <dd className="mt-1 text-sm font-semibold">Instant</dd>
-                  </div>
-                </dl>
+              <div className="px-2">
+                <p className="text-[0.62rem] font-medium tracking-[0.12em] text-white/50 uppercase">
+                  Rental window
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white">You choose</p>
+              </div>
+              <div className="px-2">
+                <p className="text-[0.62rem] font-medium tracking-[0.12em] text-white/50 uppercase">
+                  Booking
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white">Instant</p>
               </div>
             </div>
           </div>
