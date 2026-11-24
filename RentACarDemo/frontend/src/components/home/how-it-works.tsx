@@ -32,7 +32,7 @@ export function HowItWorks() {
     >
       <div className="container-page py-16 lg:py-20">
         <div className="max-w-xl">
-          <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
+          <p className="text-xs font-semibold tracking-[0.18em] text-amber-600 dark:text-amber-400 uppercase">
             How it works
           </p>
           <h2 className="mt-2 font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -50,10 +50,10 @@ export function HowItWorks() {
             return (
               <li
                 key={step.number}
-                className="relative rounded-2xl border border-border bg-card p-6 shadow-sm"
+                className="relative rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-28px_rgba(15,23,42,0.35)]"
               >
                 <div className="flex items-center justify-between">
-                  <span className="grid size-10 place-items-center rounded-xl bg-primary/10 text-primary">
+                  <span className="grid size-10 place-items-center rounded-xl bg-amber-400/10 text-amber-600 dark:text-amber-400">
                     <Icon className="size-5" aria-hidden="true" />
                   </span>
                   <span className="font-heading text-2xl font-semibold text-border">

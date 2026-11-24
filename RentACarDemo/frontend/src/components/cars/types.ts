@@ -111,7 +111,7 @@ export function validateRentalDates(startDate?: string, endDate?: string): DateV
 export function detectCarCategory(model?: string, name?: string): 'Sedan' | 'SUV' | 'Sport' | 'Electric' | 'Vehicle' {
   const text = `${model ?? ''} ${name ?? ''}`.trim()
   if (/\b(model\s*3|model\s*y|tesla|ev|electric|ioniq|leaf|Seal|Taycan)\b/i.test(text)) return 'Electric'
-  if (/\b(m3|m4|m5|rs[3-7]|amg|gt|coupe|supra|mustang|911|C8 )\b/i.test(text)) return 'Sport'
+  if (/\b(m3|m4|m5|rs[3-7]|amg|gt|coupe|supra|mustang|911|C8|Avandedor )\b/i.test(text)) return 'Sport'
   if (/\b(suv|x[1-7]|q[3-8]|rav4|cr-v|tucson|santa\s*fe|Harrier|CV-R|Prado|Pajero Sport)\b/i.test(text)) return 'SUV'
   if (/\b(corolla|civic|a3|a4|sedan|accord|elantra|city|premio|530i|E200)\b/i.test(text)) return 'Sedan'
   return 'Vehicle'

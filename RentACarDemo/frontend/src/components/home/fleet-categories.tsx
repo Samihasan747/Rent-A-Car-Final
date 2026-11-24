@@ -43,7 +43,7 @@ export function FleetCategories() {
     <section className="container-page py-16 lg:py-20">
       <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div className="max-w-xl">
-          <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
+          <p className="text-xs font-semibold tracking-[0.18em] text-amber-600 dark:text-amber-400 uppercase">
             The fleet
           </p>
           <h2 className="mt-2 font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -69,7 +69,7 @@ export function FleetCategories() {
             to="/cars"
             className="group rounded-xl focus-ring"
           >
-            <Card className="h-full gap-0 py-0 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:shadow-[0_18px_40px_-28px_rgba(15,23,42,0.45)]">
+            <Card className="h-full gap-0 py-0 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_24px_48px_-28px_rgba(15,23,42,0.4)]">
               <div className="relative aspect-[4/3] overflow-hidden border-b border-border bg-gradient-to-br from-muted via-secondary to-muted">
                 <div
                   className="velocity-grid absolute inset-0 opacity-70"
@@ -78,12 +78,12 @@ export function FleetCategories() {
                 <img
                   src={carImage(category.model)}
                   alt={`${category.name} side profile illustration`}
-                  className="absolute inset-x-2 bottom-1 w-[calc(100%-1rem)] transition-transform duration-300 group-hover:scale-[1.03]"
+                  className="absolute inset-x-2 bottom-1 w-[calc(100%-1rem)] transition-transform duration-500 group-hover:scale-[1.05]"
                   loading="lazy"
                 />
                 <Badge
                   variant="outline"
-                  className="absolute top-3 left-3 bg-background/80 backdrop-blur"
+                  className="absolute top-3 left-3 bg-background/80 backdrop-blur border-amber-400/40 text-amber-700 dark:text-amber-300"
                 >
                   {category.tag}
                 </Badge>
@@ -92,7 +92,7 @@ export function FleetCategories() {
                 <CardTitle className="flex items-center justify-between text-base">
                   {category.name}
                   <ArrowUpRight
-                    className="size-4 text-muted-foreground transition-colors group-hover:text-primary"
+                    className="size-4 text-muted-foreground transition-colors group-hover:text-amber-500"
                     aria-hidden="true"
                   />
                 </CardTitle>

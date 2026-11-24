@@ -19,7 +19,7 @@ export function HomeCta() {
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-2xl">
-          <p className="text-xs font-semibold tracking-[0.18em] text-primary uppercase">
+          <p className="text-xs font-semibold tracking-[0.18em] text-amber-600 dark:text-amber-400 uppercase">
             Ready when you are
           </p>
           <h2 className="mt-3 font-heading text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
@@ -30,7 +30,7 @@ export function HomeCta() {
             confirm your booking in minutes.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="bg-amber-400 text-black hover:bg-amber-300">
               <Link to="/cars">
                 Browse the fleet
                 <ArrowRight aria-hidden="true" />
